@@ -1,0 +1,381 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+
+body,html{
+    width: 100%;
+    height: 100vh;
+    background: black;
+    color: #fff;
+}
+nav{
+    position: relative;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8rem 0 8rem;
+}
+
+#logo{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    
+}
+
+#logo h3{
+    font-size: 1.4rem;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+#logo img{
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    border: 3px solid #4c9be6;
+    object-fit: cover;
+
+}
+
+
+
+.icon-bar {
+  display: flex;
+  gap: 20px;               /* space between icons */
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;         /* icon size */
+  color: white;
+  padding: 10px;
+}
+
+.icon-bar i:hover {
+  color: #3c84e9;          /* color on hover */
+  cursor: pointer;
+}
+
+.navigation {
+  display: flex;
+  gap: 3rem;
+  font-size: 1.2rem;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+  color: #3c84e9;  /* sweet pink hover color */
+}
+.page1, .page2, .page3, .page4, .page5{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+
+}
+
+.main{
+    height: calc(100vh - 5rem);
+    display: flex;
+    gap: 1rem;
+}
+
+.main .left, .main .right{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem 2rem 2rem 8rem;
+}
+
+.main .right{
+    padding: 2rem 8rem 2rem 2rem;
+    /* border:50% */
+   
+}
+
+.main .left h1{
+    position: relative;
+    font-size: 4rem;
+    font-weight: 500;
+    width: 90%;
+}
+
+.main .left p{
+    position: relative;
+    width: 90%;
+}
+
+.main .right img{
+    position: absolute;
+    width: 30rem;
+    z-index: 10;
+    border-radius: 15px;
+}
+
+button{
+    position: relative;
+    cursor: pointer;
+    border: none;
+    background: #fff;
+}
+
+.btn button{
+    padding: 1rem 2rem 1rem 2rem;
+    color: black;
+    border-radius: 15px;
+    font-size: 3rem ;
+}
+
+
+.imageBox{
+    position: relative;
+    display: flex;
+    height: 3rem;
+}
+
+.imageBox img{
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    left: var(--left);
+    object-fit: cover;
+}
+
+/* Second page style */
+.page2, .page3, .page4{
+    padding: 4rem 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+
+}
+
+.page2 h1, .page3 h1{
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.container{
+    position: relative;
+    width: 90%;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 30rem;
+}
+
+.innerBox{
+    display: flex;
+    gap: 1rem;
+    animation: marquee 20s linear infinite;
+    width: max-content;
+}
+
+.page2 .box1{
+    width: 14rem;
+    height: 6rem;
+    background: #54535c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    opacity: var(--opa);
+    flex-shrink: 0;
+
+}
+
+.box i{
+    font-size: 5rem;
+}
+
+@keyframes marquee{
+    from{
+        transform: translateX(0);   
+     }
+     to{
+        transform: translateX(-50%);
+     }
+        
+}
+
+/* third pagee styling */
+.whiteBtn{
+    padding:  1rem 2rem 1rem 2rem;
+    font-size: 1.4rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+    
+}
+
+.box{
+    width: 80%;
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    text-align: start;
+}
+
+.box .left,
+.box .mid,
+.box .right{
+    position: relative;
+    background-color: #54535c;
+    border-radius: 20px;
+    padding: 2rem;
+    font-size: 0.9rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    /* margin-top: 0rem; */
+}
+
+.box .left{
+    width: 50%;
+    height: 20rem;
+}
+
+.box .mid,
+.box .right{
+    width: 25%;
+    height: 20rem;
+}
+
+.left .top{
+    height: 80%;
+}
+
+.mid .top,
+.right .top{
+    position: relative;
+    height: 70%;
+}
+
+.top img{
+    width: 100%;
+}
+
+.mid h3,
+.right h3{
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-top: 0rem;
+}
+
+.box .left:hover,
+.box .mid:hover,
+.box .right:hover{
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(146deg,#5b5a63, #48474f);
+}
+
+.mid:hover img,
+.right:hover img{
+    transform: scale(1.05);
+    transition: transform 0.4s ease;
+}
+
+/* fourth page styling */
+
+.page4{
+    overflow: hidden;
+}
+
+.background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: url(./images/background.jpg); */
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.4);
+    overflow: hidden;
+    z-index: 1;
+}
+
+.content{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    z-index: 2;
+}
+
+.content h1{
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+/* Add this to your style.css */
+
+.app-grid {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* Adjust as needed */
+    z-index: 1; /* Sits behind the text */
+    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px;
+}
+
+.app-box {
+    background: rgba(255, 255, 255, 0.05); /* Very subtle background */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    backdrop-filter: blur(5px); /* Cool glass effect */
+}
+
+.app-box i {
+    font-size: 3rem; /* Big icon */
+    color: #ccc;
+}
+
+.app-box h4 {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 10px;
+    color: #aaa;
+}
+
+/* page 5 styling */
+
+.page5{
+    background: url(./images/background2.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.page5 img{
+
+    position: absolute;
+    bottom: -30%;
+}
